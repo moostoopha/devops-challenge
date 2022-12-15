@@ -8,7 +8,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "dev": "env-cmd .env ts-node ./server",
-    "start": "node dist",
+    "start": "env-cmd .env node dist ./server",
     "build": "tsc",
     "build:clean": "rm -rf dist"
   },
