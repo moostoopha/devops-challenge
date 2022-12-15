@@ -6,13 +6,14 @@ use minikube cluster or Docker for Mac. for this Challenge
 install helm
 
 ## Explanation 
-Each Deployment has its own helm chart.
-used node Port for calc for exposing it to outside of cluster.
-Calc env file use the service name managed by helm to communicate with accelerator-a and accelerator-dv application.
-created unique service account for accelerator-dv and accelerator-a deployment management.
-created role bindings for associating service account with deployment in helm templates.
-Created cron jobs in accelerator-a and in dv to restart the deployment gracefully after every 4 minutes as in node service the timeout set for 5 min and making the service unstable.
-used two replica set for all the application.
+
+* Each Deployment has its own helm chart.
+* used node Port for calc for exposing it to outside of cluster.
+* Calc env file use the service name managed by helm to communicate with accelerator-a and accelerator-dv application.
+* created unique service account for accelerator-dv and accelerator-a deployment management.
+* created role bindings for associating service account with deployment in helm templates.
+* Created cron jobs in accelerator-a and in dv to restart the deployment gracefully after every 4 minutes as in node service the timeout set for 5 min and making the service unstable.
+* used two replica set for all the application.
 
 ## Setup
 - `start the` minikube `cluster`
